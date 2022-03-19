@@ -3,22 +3,9 @@ package pl.lublin.wsei.java.cwiczenia;
 public class Main {
 
     public static void main(String[] args) {
-	System.out.println("Hello Java World \n");
-        System.out.println("Witam");
-        System.out.println("w");
-        System.out.println("moim");
-        System.out.println("kursie");
-
-        System.out.println("--------------\n");
-
-        System.out.println("Tutaj dowiesz się\n");
-        System.out.println("W jaki sposób\n");
-        System.out.println("nauczyć się\n");
-        System.out.println("programować :)\n");
-
-
-
-
+        System.out.printf("alfa\tsin(alfa)\n");
+        for (int i = 0; i < 370; i += 10)
+            System.out.printf("%d\t%f\t\n", i, Math.sin(i / 360.0 * 2 * Math.PI));
     }
 }
 
