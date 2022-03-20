@@ -1,31 +1,13 @@
 package pl.lublin.wsei.java.cwiczenia;
-
-import static java.lang.Math.log;
-
+import java.util.Scanner;
 public class Main {
-    static final String FORMAT = "%-10s%-10s%-10s%n";
-
     public static void main(String[] args) {
-        System.out.printf(FORMAT, "arg", "log2", "pow");
-        for (int arg = 1, pow = 1; arg < 5; arg *= 2, pow++) {
-            print(arg, log2(arg), sumPowers(pow));
-        }
-    }
-
-    static int log2(int arg) {
-        return (int) (log(arg) / log(2));
-    }
-
-    static int sumPowers(int arg) {
-        var sum = 0;
-        for (int i = 0; i < arg; i++) {
-            sum += Math.pow(2, i);
-        }
-        return sum;
-    }
-
-    static void print(int arg, int log2, int pow) {
-        System.out.printf(FORMAT, arg, log2, pow);
+        Scanner input = new Scanner(System.in);
+        int num1, num2;
+        System.out.print("Podaj pierwszą liczbę: ");
+        num1 = input.nextInt();
+        System.out.print("Podaj drugą liczbę: ");
+        num2 = input.nextInt();
+        System.out.printf("Wynik dodawania %d + %d = %d%n", num1, num2, num1 + num2);
     }
 }
-
