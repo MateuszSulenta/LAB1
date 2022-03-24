@@ -1,4 +1,6 @@
 package pl.lublin.wsei.java.cwiczenia;
+import pl.lublin.wsei.java.mylib.Account;
+
 import java.util.Scanner;
 
 public class Main {
@@ -12,22 +14,23 @@ public class Main {
         System.out.println("DEC = " +
                 myNumber +
                 ", BIN = " +
-                leftPad(Integer.toBinaryString(myNumber),'0',8) +
+                leftPad(Integer.toBinaryString(myNumber), '0', 8) +
                 ", " +
                 "HEX = " +
                 "%" +
-                leftPad(Integer.toHexString(myNumber).toUpperCase(),'0',4));
+                leftPad(Integer.toHexString(myNumber).toUpperCase(), '0', 4));
 
+        Account acc = new Account();
+        acc.setName("Piotr Gołąbek");
+        System.out.println(acc.getName());
 
 
     }
-    public static String leftPad(String aText, char aChar, int aWidth) {
+
+    private static String leftPad(String aText, char aChar, int aWidth) {
         String res = aText;
-        for (int i = 0; i <aWidth - aText.length(); i++ )
+        for (int i = 0; i < aWidth - aText.length(); i++)
             res = aChar + res;
         return res;
-
-
     }
-
 }
