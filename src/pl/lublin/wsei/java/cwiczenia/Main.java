@@ -21,7 +21,7 @@ public class Main {
                 leftPad(Integer.toHexString(myNumber).toUpperCase(), '0', 4));
 
         Account acc = new Account();
-        acc.setName("Piotr Gołąbek");
+        acc.setName("piotr Gołąbek");
         System.out.println(acc.getName());
 
 
