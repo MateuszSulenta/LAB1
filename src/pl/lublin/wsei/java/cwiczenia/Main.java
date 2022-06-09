@@ -22,10 +22,12 @@ public class Main {
                     leftPad(Integer.toHexString(myNumber).toUpperCase(), '0', 4));
 
             Account acc = new Account();
-            acc.setName("piotr Gołąbek");
+            acc.setName("piOtr GoLąbek");
             System.out.println(acc.getName());
 
-        System.out.printf("%s%n", Account.capitalize("stanisŁaw maruSARz"));
+            System.out.printf("%s%n",Account.capitalize("stanisŁaw maruSARz"));
+
+            System.out.println(acc.translit("Станіслав"));
 
         }
 
